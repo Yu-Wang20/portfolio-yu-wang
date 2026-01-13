@@ -308,6 +308,21 @@ const Home = () => {
                   <Mail size={18} />
                 </a>
               </div>
+
+              {/* UIUC Slogan Card */}
+              <div className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 flex flex-col items-center justify-center text-center">
+                <GraduationCap size={24} className="text-illiniOrange mb-2" />
+                <GradientText 
+                  colors={['#FF5F00', '#003C71']} 
+                  animationSpeed={6} 
+                  showBorder={false}
+                  className="text-lg md:text-xl font-bold font-heading leading-tight"
+                >
+                  Hail to the orange,
+                  <br />
+                  Hail to the blue!
+                </GradientText>
+              </div>
             </motion.div>
           </div>
 

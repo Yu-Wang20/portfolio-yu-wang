@@ -11,6 +11,8 @@ export default {
         neonPurple: '#5227FF',
         pinkPop: '#FF9FFC',
         softPurple: '#B19EEF',
+        illiniOrange: '#FF5F00',
+        illiniBlue: '#003C71',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'], // 正文
