@@ -102,7 +102,7 @@ const Home = () => {
       title: 'NYC Flight Viz',
       subtitle: 'Traffic & Delay Visualization',
       description: 'A course project visualizing route traffic and delays using Canvas-accelerated maps for high-performance data rendering.',
-      image: 'https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?w=600&h=400&fit=crop',
+      image: '/nyc-flight-viz.png',
       tags: ['Canvas', 'Data Viz', 'JavaScript'],
       highlights: [
         'Canvas-accelerated map rendering',
