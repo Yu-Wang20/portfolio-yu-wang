@@ -11,7 +11,7 @@ import {
   Code, Database, Terminal, BarChart3, 
   GitBranch, BrainCircuit, Globe, Linkedin,
   Github, Mail, Trophy, GraduationCap, Spade,
-  Download, MapPin, Car, Smile, Crown
+  Download, MapPin, Car, Smile, Crown, Bike
 } from 'lucide-react';
 
 const Home = () => {
@@ -117,35 +117,35 @@ const Home = () => {
     }
   ];
 
-  // Fun Facts 数据 - 带图片
+  // Fun Facts 数据 - 统一使用 Lucide 图标
   const funFacts = [
     { 
-      icon: <img src="/images/funfacts/cities.png" alt="Cities" className="w-8 h-8 object-contain" />, 
-      text: 'Lived in Shanghai, NYC, Champaign', 
+      icon: <Trophy size={20} />, 
+      text: 'Manchester United Fan', 
+      color: 'text-red-500' 
+    },
+    { 
+      icon: <Car size={20} />, 
+      text: 'Car Enthusiast', 
       color: 'text-blue-400' 
     },
     { 
-      icon: <img src="/images/funfacts/manchester-united.png" alt="Man Utd" className="w-8 h-8 object-contain" />, 
-      text: 'Manchester United Fan', 
-      color: 'text-red-400' 
-    },
-    { 
-      icon: <img src="/images/funfacts/sports-car.png" alt="Car" className="w-8 h-8 object-contain" />, 
-      text: 'Car Enthusiast', 
+      icon: <Bike size={20} />, 
+      text: 'Cycling Enthusiast', 
       color: 'text-green-400' 
     },
     { 
-      icon: <img src="/images/funfacts/poker-cards.png" alt="Poker" className="w-8 h-8 object-contain" />, 
+      icon: <Spade size={20} />, 
       text: 'Texas Hold\'em Player', 
       color: 'text-purple-400' 
     },
     { 
-      icon: <img src="/images/funfacts/minion.png" alt="Minion" className="w-8 h-8 object-contain" />, 
+      icon: <Smile size={20} />, 
       text: 'Minions Lover', 
       color: 'text-yellow-400' 
     },
     { 
-      icon: <img src="/images/funfacts/clash-royale.png" alt="Clash Royale" className="w-8 h-8 object-contain" />, 
+      icon: <Crown size={20} />, 
       text: 'Clash Royale Player', 
       color: 'text-orange-400' 
     },
@@ -553,7 +553,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <span className={`text-lg`}>{fact.icon}</span>
+                <span className={`${fact.color}`}>{fact.icon}</span>
                 <span className="text-sm text-gray-200 font-medium">{fact.text}</span>
               </motion.div>
             ))}
