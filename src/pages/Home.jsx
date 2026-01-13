@@ -256,7 +256,7 @@ const Home = () => {
               {/* Resume Download */}
               <a 
                 href="/resume.pdf" 
-                className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-pinkPop/30 transition-colors group"
+                className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-pinkPop/30 transition-colors group flex flex-col items-center justify-center"
               >
                 <Download size={14} className="text-pinkPop mb-2 group-hover:bounce" />
                 <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Resume</p>
