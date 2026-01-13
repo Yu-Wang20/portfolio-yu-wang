@@ -335,13 +335,17 @@ const Home = () => {
             <div className="flex items-center gap-2 mb-4">
               <Spade size={14} className="text-purple-400" />
               <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-gray-400">
-                Poker & Data Science
+                Bayesian Perspective & Poker Logic
               </span>
             </div>
             
             <h2 className="text-lg md:text-xl font-heading text-white leading-snug mb-6">
-              "Poker taught me to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-bold">make optimal decisions under uncertainty</span> by quantifying risk and Expected Value (EV) when information is incomplete."
+              "All models are wrong, but <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-bold">some are useful.</span>"
+              <span className="block text-sm text-gray-400 mt-2 font-normal italic">— George E. P. Box</span>
             </h2>
+            <p className="text-sm text-gray-300 mb-6 leading-relaxed">
+              As a <span className="text-purple-400 font-semibold">Bayesian</span>, I treat every poker hand and data point as a prior to be updated, constantly refining my beliefs as new information emerges.
+            </p>
             
             <div className="flex flex-wrap gap-3">
               {[
