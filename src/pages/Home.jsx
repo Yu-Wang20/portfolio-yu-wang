@@ -229,6 +229,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
+              {/* Row 1 */}
               {/* Tech Stack LogoLoop */}
               <div className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-neonPurple/30 transition-colors overflow-hidden">
                 <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-2">Tech Stack</p>
@@ -252,29 +253,17 @@ const Home = () => {
                   fadeOutColor="rgba(0,0,0,0.4)"
                 />
               </div>
-              
-              {/* Seeking Summer '26 */}
-              <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-green-500/30 transition-colors">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                  </span>
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider">Status</p>
-                </div>
-                <p className="text-xs font-medium text-white">Seeking Summer '26</p>
-              </div>
-
               {/* Resume Download */}
               <a 
                 href="/resume.pdf" 
-                className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-pinkPop/30 transition-colors group"
+                className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-pinkPop/30 transition-colors group"
               >
                 <Download size={14} className="text-pinkPop mb-2 group-hover:bounce" />
                 <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Resume</p>
                 <p className="text-xs font-medium text-white">Grab My Resume</p>
               </a>
 
+              {/* Row 2 */}
               {/* Location */}
               <div className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10">
                 <div className="flex items-center gap-4">
@@ -295,7 +284,6 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-
               {/* Socials */}
               <div className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-around">
                 <a href="https://www.linkedin.com/in/yu-wang-7b295b371" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
@@ -309,11 +297,12 @@ const Home = () => {
                 </a>
               </div>
 
+              {/* Row 3 */}
               {/* UIUC Slogan Card */}
               <div className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 flex flex-col items-center justify-center text-center">
                 <GraduationCap size={24} className="text-illiniOrange mb-2" />
                 <GradientText 
-                  colors={['#FF5F00', '#003C71']} 
+                  colors={["#FF5F00", "#003C71"]} 
                   animationSpeed={6} 
                   showBorder={false}
                   className="text-lg md:text-xl font-bold font-heading leading-tight"
@@ -322,6 +311,17 @@ const Home = () => {
                   <br />
                   Hail to the blue!
                 </GradientText>
+              </div>
+              {/* Seeking Summer '26 (Status) - now col-span-2 and larger */}
+              <div className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-green-500/30 transition-colors flex flex-col items-center justify-center">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  </span>
+                  <p className="text-sm text-gray-500 uppercase tracking-wider">Status</p>
+                </div>
+                <p className="text-base font-medium text-white">Seeking Summer '26</p>
               </div>
             </motion.div>
           </div>
