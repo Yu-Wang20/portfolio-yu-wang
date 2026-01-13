@@ -234,14 +234,14 @@ const Home = () => {
                 <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-2">Tech Stack</p>
                 <LogoLoop
                   logos={[
-                    { node: <span className="text-white/90 font-mono text-base px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-md border border-white/20 hover:border-neonPurple/50 transition-all hover:scale-105">Python</span> },
-                    { node: <span className="text-cyan-400 font-mono text-base px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-md border border-white/20 hover:border-neonPurple/50 transition-all hover:scale-105">React</span> },
-                    { node: <span className="text-yellow-400 font-mono text-base px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-md border border-white/20 hover:border-neonPurple/50 transition-all hover:scale-105">SQL</span> },
-                    { node: <span className="text-blue-400 font-mono text-base px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-md border border-white/20 hover:border-neonPurple/50 transition-all hover:scale-105">Tableau</span> },
-                    { node: <span className="text-orange-400 font-mono text-base px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-md border border-white/20 hover:border-neonPurple/50 transition-all hover:scale-105">Git</span> },
-                    { node: <span className="text-purple-400 font-mono text-base px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-md border border-white/20 hover:border-neonPurple/50 transition-all hover:scale-105">ML</span> },
-                    { node: <span className="text-green-400 font-mono text-base px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-md border border-white/20 hover:border-neonPurple/50 transition-all hover:scale-105">Pandas</span> },
-                    { node: <span className="text-pink-400 font-mono text-base px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-md border border-white/20 hover:border-neonPurple/50 transition-all hover:scale-105">R</span> },
+                    { node: <span className="text-white/90 font-mono text-base px-3 py-1.5 rounded-md hover:bg-white/5 transition-all hover:scale-105">Python</span> },
+                    { node: <span className="text-cyan-400 font-mono text-base px-3 py-1.5 rounded-md hover:bg-white/5 transition-all hover:scale-105">React</span> },
+                    { node: <span className="text-yellow-400 font-mono text-base px-3 py-1.5 rounded-md hover:bg-white/5 transition-all hover:scale-105">SQL</span> },
+                    { node: <span className="text-blue-400 font-mono text-base px-3 py-1.5 rounded-md hover:bg-white/5 transition-all hover:scale-105">Tableau</span> },
+                    { node: <span className="text-orange-400 font-mono text-base px-3 py-1.5 rounded-md hover:bg-white/5 transition-all hover:scale-105">Git</span> },
+                    { node: <span className="text-purple-400 font-mono text-base px-3 py-1.5 rounded-md hover:bg-white/5 transition-all hover:scale-105">ML</span> },
+                    { node: <span className="text-green-400 font-mono text-base px-3 py-1.5 rounded-md hover:bg-white/5 transition-all hover:scale-105">Pandas</span> },
+                    { node: <span className="text-pink-400 font-mono text-base px-3 py-1.5 rounded-md hover:bg-white/5 transition-all hover:scale-105">R</span> },
                   ]}
                   speed={60}
                   direction="left"
