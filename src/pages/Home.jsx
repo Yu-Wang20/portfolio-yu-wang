@@ -319,40 +319,40 @@ const Home = () => {
       </section>
 
       {/* ========== POKER PHILOSOPHY SECTION ========== */}
-      <section className="py-20">
+      <section className="py-12">
         <motion.div 
-          className="relative p-8 md:p-12 rounded-[2.5rem] bg-black/50 backdrop-blur-xl border border-white/10 overflow-hidden"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          className="relative p-6 md:p-8 rounded-[2rem] bg-black/40 backdrop-blur-xl border border-white/10 overflow-hidden max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 p-8 opacity-10">
-            <Spade size={120} className="text-white" />
+          <div className="absolute -top-4 -right-4 opacity-5">
+            <Spade size={100} className="text-white" />
           </div>
           
-          <div className="relative z-10 max-w-3xl">
-            <div className="flex items-center gap-2 mb-6">
-              <Spade size={16} className="text-purple-400" />
-              <span className="text-xs font-mono uppercase tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-bold">
-                Why a Poker Player makes a better Data Scientist
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-4">
+              <Spade size={14} className="text-purple-400" />
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-gray-400">
+                Poker & Data Science
               </span>
             </div>
             
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-heading font-medium text-white leading-tight mb-8">
-              "In poker, you never have complete information — just probabilities. I've learned to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-bold">make optimal decisions under uncertainty</span>, quantify risk, and know when the expected value favors action over caution."
+            <h2 className="text-lg md:text-xl font-heading text-white leading-snug mb-6">
+              "Poker taught me to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-bold">make optimal decisions under uncertainty</span> by quantifying risk and Expected Value (EV) when information is incomplete."
             </h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="flex flex-wrap gap-3">
               {[
-                { icon: '♦', label: 'Bayesian Thinking' },
-                { icon: '♣', label: 'Risk Management' },
-                { icon: '♥', label: 'Pattern Recognition' },
-                { icon: '♠', label: 'EV Optimization' }
+                { icon: '♦', label: 'Bayesian' },
+                { icon: '♣', label: 'Risk Mgmt' },
+                { icon: '♥', label: 'Patterns' },
+                { icon: '♠', label: 'EV Opt' }
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/5">
-                  <span className="text-pink-500 font-bold">{item.icon}</span>
-                  <span className="text-[10px] md:text-xs text-gray-400 font-medium">{item.label}</span>
+                <div key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/5">
+                  <span className="text-pink-500 text-xs font-bold">{item.icon}</span>
+                  <span className="text-[10px] text-gray-400 font-medium">{item.label}</span>
                 </div>
               ))}
             </div>
