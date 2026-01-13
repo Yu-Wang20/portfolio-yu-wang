@@ -11,7 +11,7 @@ import {
   Code, Database, Terminal, BarChart3, 
   GitBranch, BrainCircuit, Globe, Linkedin,
   Github, Mail, Trophy, GraduationCap, Spade,
-  Download, MapPin, Car, Smile
+  Download, MapPin, Car, Smile, Crown
 } from 'lucide-react';
 
 const Home = () => {
@@ -25,28 +25,18 @@ const Home = () => {
     { name: 'Data Viz', level: 92 },
   ];
 
-  // Tech Stack 图标数据
-  const techLogos = [
-    <span key="python" className="text-2xl">🐍</span>,
-    <span key="react" className="text-2xl text-cyan-400">⚛️</span>,
-    <span key="sql" className="text-2xl">🗄️</span>,
-    <span key="tableau" className="text-2xl">📊</span>,
-    <span key="git" className="text-2xl">🔀</span>,
-    <span key="ml" className="text-2xl">🤖</span>,
-  ];
-
-  // 项目数据 - 添加真实链接
+  // 项目数据 - 同步最新简历描述
   const projects = [
     {
       title: 'SICE',
       subtitle: 'Poker Decision Engine',
-      description: 'A data-driven Texas Hold\'em research platform. Input your situation, get mathematically optimal decisions powered by game theory.',
+      description: 'A research data-driven Texas poker research website. Developed a GTO (Game Theory Optimal) solver using Monte Carlo simulations to calculate real-time EV.',
       image: 'https://images.unsplash.com/photo-1511193311914-0346f16efe90?w=600&h=400&fit=crop',
-      tags: ['Game Theory', 'React', 'Python', 'Probability'],
+      tags: ['Game Theory', 'Monte Carlo', 'Python', 'React'],
       highlights: [
-        'Real-time EV calculations using Monte Carlo simulation',
-        'GTO (Game Theory Optimal) strategy recommendations',
-        'Hand range visualization with equity graphs'
+        'Real-time EV calculations for complex poker scenarios',
+        'GTO strategy recommendations and mathematical principles',
+        'Interactive feedback loop for decision-making improvement'
       ],
       links: { 
         github: 'https://github.com/Yu-Wang20',
@@ -58,13 +48,13 @@ const Home = () => {
     {
       title: 'ChurnGuard',
       subtitle: 'Customer Lifecycle Analytics',
-      description: 'ML-powered platform for predicting customer churn and optimizing retention strategies through RFM segmentation.',
+      description: 'ML-powered platform for predicting customer churn and optimizing retention strategies through RFM segmentation and predictive risk scoring.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-      tags: ['Python', 'Scikit-learn', 'XGBoost', 'Streamlit'],
+      tags: ['XGBoost', 'RFM', 'Scikit-learn', 'Streamlit'],
       highlights: [
-        'Calibrated churn model with 0.89 AUC-ROC',
-        'RFM segmentation identifying 5 customer personas',
-        'ROI simulator for marketing budget optimization'
+        'Achieved 0.89 AUC-ROC in predicting customer churn',
+        'RFM segmentation identifying high-value customer personas',
+        'Simulated promotion scenarios to forecast incremental ROI'
       ],
       links: { 
         github: 'https://github.com/Yu-Wang20',
@@ -76,12 +66,12 @@ const Home = () => {
     {
       title: 'Hotel Funnel Lab',
       subtitle: 'Conversion Analytics Platform',
-      description: 'End-to-end booking funnel analytics with A/B testing framework to diagnose drop-offs and optimize conversions.',
+      description: 'End-to-end booking funnel analytics with A/B testing framework to diagnose drop-offs and optimize conversions through statistical validation.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop',
       tags: ['A/B Testing', 'SQL', 'Statistics', 'Python'],
       highlights: [
-        'Funnel analysis revealing 34% checkout abandonment',
-        'A/B test framework with power analysis',
+        'Diagnosed critical user drop-offs with 34% abandonment rate',
+        'Rigorous A/B testing protocols with power analysis',
         'Statistical significance testing at α=0.05'
       ],
       links: { 
@@ -90,6 +80,40 @@ const Home = () => {
       },
       color: 'softPurple',
       icon: <Globe size={24} />
+    },
+    {
+      title: 'Prey Simulator',
+      subtitle: 'Predator-Prey Dynamics',
+      description: 'A course project simulating predator-prey dynamics via discrete stochastic phases to study ecosystem stability.',
+      image: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=600&h=400&fit=crop',
+      tags: ['Stochastic', 'Simulation', 'Python'],
+      highlights: [
+        'Discrete stochastic phase modeling',
+        'Dynamic ecosystem stability analysis',
+        'Visualizing population fluctuations'
+      ],
+      links: { 
+        github: 'https://github.com/Yu-Wang20'
+      },
+      color: 'neonPurple',
+      icon: <Terminal size={24} />
+    },
+    {
+      title: 'NYC Flight Viz',
+      subtitle: 'Traffic & Delay Visualization',
+      description: 'A course project visualizing route traffic and delays using Canvas-accelerated maps for high-performance data rendering.',
+      image: 'https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?w=600&h=400&fit=crop',
+      tags: ['Canvas', 'Data Viz', 'JavaScript'],
+      highlights: [
+        'Canvas-accelerated map rendering',
+        'Real-time traffic and delay visualization',
+        'Interactive route exploration'
+      ],
+      links: { 
+        github: 'https://github.com/Yu-Wang20'
+      },
+      color: 'pinkPop',
+      icon: <MapPin size={24} />
     }
   ];
 
@@ -238,267 +262,253 @@ const Home = () => {
                   </span>
                   <p className="text-[10px] text-gray-500 uppercase tracking-wider">Status</p>
                 </div>
-                <p className="text-sm font-semibold text-green-400">Seeking Summer '26</p>
+                <p className="text-xs font-medium text-white">Seeking Summer '26</p>
               </div>
-              
+
               {/* Resume Download */}
               <a 
                 href="/resume.pdf" 
-                target="_blank"
-                className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-pinkPop/30 transition-colors group cursor-pointer"
+                className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-pinkPop/30 transition-colors group"
               >
-                <div className="flex items-center gap-2 mb-1">
-                  <Download size={12} className="text-pinkPop group-hover:animate-bounce" />
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider">Resume</p>
-                </div>
-                <p className="text-sm font-semibold text-pinkPop group-hover:text-white transition-colors">Grab My Resume</p>
+                <Download size={14} className="text-pinkPop mb-2 group-hover:bounce" />
+                <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Resume</p>
+                <p className="text-xs font-medium text-white">Grab My Resume</p>
               </a>
-            </motion.div>
 
-            {/* Second Row: Location + Relocation */}
-            <motion.div 
-              className="grid grid-cols-2 gap-3 max-w-md mt-3"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.35 }}
-            >
-              {/* Current Location */}
-              <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-softPurple/30 transition-colors">
-                <p className="text-2xl mb-1">📍</p>
-                <p className="text-xs text-gray-500">Champaign, IL</p>
+              {/* Location */}
+              <div className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10">
+                <div className="flex items-center gap-4">
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-1 mb-1">
+                      <MapPin size={10} className="text-red-500" />
+                      <p className="text-[10px] text-gray-500 uppercase tracking-wider">Location</p>
+                    </div>
+                    <p className="text-xs font-medium text-white">Champaign, IL</p>
+                  </div>
+                  <div className="h-8 w-[1px] bg-white/10 mx-2"></div>
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-1 mb-1">
+                      <Globe size={10} className="text-blue-400" />
+                      <p className="text-[10px] text-gray-500 uppercase tracking-wider">Relocation</p>
+                    </div>
+                    <p className="text-xs font-medium text-white">Willing to Relocate</p>
+                  </div>
+                </div>
               </div>
-              
-              {/* Willing to Relocate */}
-              <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-colors flex items-center gap-3">
-                <Globe size={18} className="text-blue-400" />
-                <p className="text-sm text-blue-400 font-medium">Willing to Relocate</p>
+
+              {/* Socials */}
+              <div className="col-span-2 p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-around">
+                <a href="https://www.linkedin.com/in/yu-wang-7b295b371" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                  <Linkedin size={18} />
+                </a>
+                <a href="https://github.com/Yu-Wang20" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                  <Github size={18} />
+                </a>
+                <a href="mailto:yuw17@illinois.edu" className="text-gray-400 hover:text-white transition-colors">
+                  <Mail size={18} />
+                </a>
               </div>
             </motion.div>
           </div>
 
-          {/* Right: Lanyard */}
-          <motion.div 
-            className="hidden lg:block"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            style={{ width: '320px', height: '450px' }}
-          >
-            <Lanyard position={[0, 0, 24]} gravity={[0, -40, 0]} />
-          </motion.div>
+          {/* Right: Lanyard 3D */}
+          <div className="hidden lg:block h-[600px] sticky top-28">
+            <Lanyard />
+          </div>
         </div>
+      </section>
 
-        {/* Poker Philosophy Section */}
+      {/* ========== POKER PHILOSOPHY SECTION ========== */}
+      <section className="py-20">
         <motion.div 
-          className="relative p-6 md:p-8 rounded-3xl bg-black/50 backdrop-blur-md border border-white/10 mt-12 max-w-4xl"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="relative p-8 md:p-12 rounded-[2.5rem] bg-black/50 backdrop-blur-xl border border-white/10 overflow-hidden"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
         >
-          <div className="absolute top-4 right-4 text-4xl opacity-10">♠️</div>
-          <p className="text-xs uppercase tracking-wider mb-3 font-mono flex items-center gap-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
-              ♠ Why a Poker Player Makes a Better Data Scientist
-            </span>
-          </p>
-          <blockquote className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-            "In poker, you never have complete information — just probabilities. 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-semibold"> I've learned to make optimal decisions under uncertainty</span>, 
-            quantify risk, and know when the expected value favors action over caution."
-          </blockquote>
-          <div className="flex flex-wrap gap-2 text-xs text-gray-400">
-            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-              <span className="text-purple-400">♦</span> Bayesian Thinking
-            </span>
-            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-              <span className="text-pink-400">♣</span> Risk Management
-            </span>
-            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-              <span className="text-purple-400">♥</span> Pattern Recognition
-            </span>
-            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-              <span className="text-pink-400">♠</span> EV Optimization
-            </span>
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 p-8 opacity-10">
+            <Spade size={120} className="text-white" />
+          </div>
+          
+          <div className="relative z-10 max-w-3xl">
+            <div className="flex items-center gap-2 mb-6">
+              <Spade size={16} className="text-purple-400" />
+              <span className="text-xs font-mono uppercase tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-bold">
+                Why a Poker Player makes a better Data Scientist
+              </span>
+            </div>
+            
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-heading font-medium text-white leading-tight mb-8">
+              "In poker, you never have complete information — just probabilities. I've learned to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-bold">make optimal decisions under uncertainty</span>, quantify risk, and know when the expected value favors action over caution."
+            </h2>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { icon: '♦', label: 'Bayesian Thinking' },
+                { icon: '♣', label: 'Risk Management' },
+                { icon: '♥', label: 'Pattern Recognition' },
+                { icon: '♠', label: 'EV Optimization' }
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/5">
+                  <span className="text-pink-500 font-bold">{item.icon}</span>
+                  <span className="text-[10px] md:text-xs text-gray-400 font-medium">{item.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </section>
 
       {/* ========== SKILLS SECTION ========== */}
-      <section id="skills" className="py-16">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-3">
-            Technical <span className="text-neonPurple">Arsenal</span>
-          </h2>
-          <p className="text-gray-500 text-sm max-w-lg mx-auto">
-            Proficiency levels based on project experience and professional application
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          {/* 雷达图 */}
-          <div className="flex justify-center">
-            <SkillRadar skills={skills} size={300} />
+      <section id="skills" className="py-20">
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          {/* Left: Radar Chart */}
+          <div className="w-full lg:w-1/2">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">Technical Arsenal</h2>
+              <p className="text-gray-400 mb-8 text-sm max-w-md">
+                Proficiency levels based on project experience and professional application
+              </p>
+              <div className="h-[400px] w-full">
+                <SkillRadar data={skills} />
+              </div>
+            </motion.div>
           </div>
 
-          {/* 技能分类 */}
-          <div className="space-y-4">
-            <motion.div 
-              className="p-5 rounded-3xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-neonPurple/30 transition-colors"
-              whileHover={{ scale: 1.01 }}
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <Code className="text-neonPurple" size={20} />
-                <h3 className="text-base font-semibold text-white">Languages</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {['Python', 'SQL', 'R', 'Java', 'TypeScript', 'C++'].map(lang => (
-                  <span key={lang} className="px-3 py-1 rounded-full bg-neonPurple/10 text-neonPurple text-xs">
-                    {lang}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div 
-              className="p-5 rounded-3xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-pinkPop/30 transition-colors"
-              whileHover={{ scale: 1.01 }}
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <Terminal className="text-pinkPop" size={20} />
-                <h3 className="text-base font-semibold text-white">Tools & Frameworks</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {['Tableau', 'Git', 'React', 'Next.js', 'Pandas', 'Scikit-learn'].map(tool => (
-                  <span key={tool} className="px-3 py-1 rounded-full bg-pinkPop/10 text-pinkPop text-xs">
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div 
-              className="p-5 rounded-3xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-softPurple/30 transition-colors"
-              whileHover={{ scale: 1.01 }}
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <BrainCircuit className="text-softPurple" size={20} />
-                <h3 className="text-base font-semibold text-white">Analytics & ML</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {['A/B Testing', 'ML Analytics', 'Product Analytics', 'Statistical Modeling', 'NLP'].map(skill => (
-                  <span key={skill} className="px-3 py-1 rounded-full bg-softPurple/10 text-softPurple text-xs">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+          {/* Right: Skill Categories */}
+          <div className="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { 
+                title: 'Languages', 
+                icon: <Code size={18} />, 
+                items: ['Python', 'SQL', 'R', 'Java', 'TypeScript', 'C++'] 
+              },
+              { 
+                title: 'Tools & Frameworks', 
+                icon: <GitBranch size={18} />, 
+                items: ['Tableau', 'Git', 'React', 'Next.js', 'Pandas', 'Scikit-learn'] 
+              },
+              { 
+                title: 'Analytics & ML', 
+                icon: <BrainCircuit size={18} />, 
+                items: ['A/B Testing', 'ML Analytics', 'Product Analytics', 'Statistical Modeling', 'NLP'] 
+              }
+            ].map((cat, i) => (
+              <motion.div 
+                key={cat.title}
+                className={`p-6 rounded-3xl bg-black/40 backdrop-blur-md border border-white/10 ${i === 2 ? 'md:col-span-2' : ''}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <div className="flex items-center gap-3 mb-4 text-neonPurple">
+                  {cat.icon}
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-white">{cat.title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {cat.items.map(item => (
+                    <span key={item} className="px-3 py-1 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ========== EDUCATION & EXPERIENCE ========== */}
-      <section id="experience" className="py-16">
-        <div className="grid md:grid-cols-2 gap-6">
+      <section id="experience" className="py-20">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Education */}
-          <motion.div 
-            className="p-6 rounded-3xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-softPurple/20 transition-colors"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="p-8 rounded-[2.5rem] bg-black/40 backdrop-blur-md border border-white/10"
           >
-            <div className="flex items-center gap-3 mb-5">
-              <div className="p-2.5 rounded-xl bg-softPurple/10 text-softPurple">
-                <GraduationCap size={20} />
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-3 rounded-2xl bg-neonPurple/20 text-neonPurple">
+                <GraduationCap size={24} />
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white">Education</h3>
-                <p className="text-xs text-gray-500">Sep 2023 - May 2027</p>
-              </div>
+              <h2 className="text-2xl font-heading font-bold text-white">Education</h2>
             </div>
             
-            <h4 className="text-base font-semibold text-white mb-1">
-              University of Illinois Urbana-Champaign
-            </h4>
-            <p className="text-softPurple text-sm mb-3">B.S. Statistics, Minor in Computer Science</p>
-            
-            <div className="flex items-center gap-3 mb-4">
-              <div className="px-3 py-1.5 rounded-full bg-pinkPop/10 text-pinkPop text-sm font-semibold">
-                GPA: 3.75/4.0
-              </div>
-              <div className="flex items-center gap-1.5 text-yellow-500 text-xs">
-                <Trophy size={14} />
-                <span>Dean's List '23-'25</span>
+            <div className="relative pl-8 border-l border-white/10">
+              <div className="absolute top-0 left-[-5px] w-[10px] h-[10px] rounded-full bg-neonPurple shadow-[0_0_10px_#5227FF]" />
+              <p className="text-xs font-mono text-neonPurple mb-2">Sep 2023 - May 2027</p>
+              <h3 className="text-lg font-bold text-white mb-1">University of Illinois Urbana-Champaign</h3>
+              <p className="text-gray-300 text-sm mb-4">B.S. Statistics, Minor in Computer Science</p>
+              <div className="space-y-2">
+                <p className="text-xs text-gray-400 flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-gray-600" /> GPA: 3.75/4.0
+                </p>
+                <p className="text-xs text-gray-400 flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-gray-600" /> Dean's List '23-'25
+                </p>
+                <p className="text-xs text-gray-400 leading-relaxed mt-4">
+                  <span className="text-gray-300 font-medium">Key Courses:</span> Statistical Modeling, Data Structures, Applied LLMs, Probability Theory
+                </p>
               </div>
             </div>
-
-            <p className="text-xs text-gray-400">
-              <span className="text-gray-300 font-medium">Key Courses:</span> Statistical Modeling, 
-              Data Structures, Applied LLMs, Probability Theory
-            </p>
           </motion.div>
 
           {/* Experience */}
-          <motion.div 
-            className="p-6 rounded-3xl bg-black/40 backdrop-blur-md border border-white/10 hover:border-neonPurple/20 transition-colors"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="p-8 rounded-[2.5rem] bg-black/40 backdrop-blur-md border border-white/10"
           >
-            <div className="flex items-center gap-3 mb-5">
-              <div className="p-2.5 rounded-xl bg-neonPurple/10 text-neonPurple">
-                <Database size={20} />
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-3 rounded-2xl bg-pinkPop/20 text-pinkPop">
+                <Trophy size={24} />
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white">Experience</h3>
-                <p className="text-xs text-gray-500">Aug 2025 - Dec 2025</p>
-              </div>
+              <h2 className="text-2xl font-heading font-bold text-white">Experience</h2>
             </div>
             
-            <h4 className="text-base font-semibold text-white mb-1">
-              Data Analyst Intern
-            </h4>
-            <p className="text-neonPurple text-sm mb-3">Atlas, UIUC</p>
-            
-            <ul className="space-y-2 text-xs text-gray-400">
-              <li className="flex gap-2">
-                <span className="text-neonPurple mt-0.5">▹</span>
-                Built Tableau dashboards surfacing operational trends for staffing optimization
-              </li>
-              <li className="flex gap-2">
-                <span className="text-neonPurple mt-0.5">▹</span>
-                Transformed raw datasets using SQL, producing analysis-ready tables
-              </li>
-              <li className="flex gap-2">
-                <span className="text-neonPurple mt-0.5">▹</span>
-                Presented weekly insights to leadership, driving workflow improvements
-              </li>
-            </ul>
+            <div className="relative pl-8 border-l border-white/10">
+              <div className="absolute top-0 left-[-5px] w-[10px] h-[10px] rounded-full bg-pinkPop shadow-[0_0_10px_#FF9FFC]" />
+              <p className="text-xs font-mono text-pinkPop mb-2">Aug 2025 - Dec 2025</p>
+              <h3 className="text-lg font-bold text-white mb-1">Data Analyst Intern</h3>
+              <p className="text-gray-300 text-sm mb-4">Atlas, UIUC</p>
+              <ul className="space-y-3">
+                {[
+                  'Built Tableau dashboards surfacing operational trends for staffing optimization',
+                  'Transformed raw datasets using SQL, producing analysis-ready tables',
+                  'Presented weekly insights to leadership, driving workflow improvements'
+                ].map((bullet, i) => (
+                  <li key={i} className="text-xs text-gray-400 flex items-start gap-2">
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-gray-600 shrink-0" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* ========== PROJECTS SECTION ========== */}
-      <section id="projects" className="py-16">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-3">
-            Selected <span className="text-pinkPop">Works</span>
-          </h2>
-          <p className="text-gray-500 text-sm max-w-lg">
-            Projects showcasing data science, machine learning, and full-stack development capabilities
-          </p>
-        </motion.div>
+      <section id="projects" className="py-20">
+        <div className="flex justify-between items-end mb-12">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Selected Works</h2>
+            <p className="text-gray-400 text-sm max-w-md">
+              Projects showcasing data science, machine learning, and full-stack development capabilities
+            </p>
+          </div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} {...project} />
           ))}
@@ -539,7 +549,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <span className={`${fact.color} text-lg`}>{typeof fact.icon === 'string' ? fact.icon : fact.icon}</span>
+                <span className={`text-lg`}>{fact.icon}</span>
                 <span className="text-sm text-gray-200 font-medium">{fact.text}</span>
               </motion.div>
             ))}
